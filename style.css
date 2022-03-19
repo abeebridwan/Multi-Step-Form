@@ -55,3 +55,6 @@ button {
 .card.active {
   display: block;
 }
+.multi-step-form {
+  overflow: hidden; /* get rid of the scroll bar */
+}

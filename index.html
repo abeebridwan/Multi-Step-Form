@@ -6,62 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multistep form</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="other.js" defer></script>
   </head>
   <body>
-    <form data-multi-step>
+    <form data-multi-step class="multi-step-form">
       <div class="card" data-step>
         <h3 id="subtitle">STEP 1</h3>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" required />
+          <input type="email" name="email" id="email" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete
-            required
-          />
+          <input type="password" name="password" id="password" autocomplete />
         </div>
-        <button type="button" data-next>Next</button>
+        <button type="button" data-next onclick="plusStep(1)">Next</button>
       </div>
 
       <div class="card" data-step>
         <h3 id="subtitle">STEP 2</h3>
         <div class="form-group">
           <label for="address">Address</label>
-          <input type="text" name="address" id="address" required />
+          <input type="text" name="address" id="address" />
         </div>
         <div class="form-group">
           <label for="city">City</label>
-          <input type="text" name="city" id="city" required />
+          <input type="text" name="city" id="city" />
         </div>
         <div class="form-group">
           <label for="zipcode">Zip Code</label>
-          <input type="text" name="zipcode" id="zipcode" required />
+          <input type="text" name="zipcode" id="zipcode" />
         </div>
-        <button type="button" data-previous>Previous</button>
-        <button type="button" data-next>Next</button>
+        <button type="button" data-previous onclick="plusStep(-1)">
+          Previous
+        </button>
+        <button type="button" data-next onclick="plusStep(1)">Next</button>
       </div>
 
       <div class="card" data-step>
         <h3 id="subtitle">STEP 3</h3>
         <div class="form-group">
           <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" required />
+          <input type="text" name="lastName" id="lastName" />
         </div>
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" required />
+          <input type="text" name="firstName" id="firstName" />
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" name="phone" id="phone" required />
+          <input type="tel" name="phone" id="phone" />
         </div>
-        <button type="button" data-previous>Previous</button>
+        <button type="button" data-previous onclick="plusStep(-1)">
+          Previous
+        </button>
         <button type="submit">Submit</button>
       </div>
     </form>
