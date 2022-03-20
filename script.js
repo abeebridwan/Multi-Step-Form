@@ -5,11 +5,13 @@ let currentStep = formStep.findIndex(step => {
   return step.classList.contains("active")
 })
 
+/* show the first step */
 if (currentStep < 0) {
   currentStep = 0
   showCurrentStep()
 }
 
+/* when next and previous buttons are clicked */
 multiStep.addEventListener("click", e => {
   let incrementor
   if (e.target.matches("[data-next]")) {
@@ -31,6 +33,7 @@ multiStep.addEventListener("click", e => {
 
 })
 
+/* show the current step */
 function showCurrentStep() {
   formStep.forEach((step, index) => {
     step.classList.toggle('active', index === currentStep)

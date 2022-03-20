@@ -15,11 +15,17 @@
         <h3 id="subtitle">STEP 1</h3>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <input required type="email" name="email" id="email" />
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" autocomplete />
+          <input
+            required
+            type="password"
+            name="password"
+            id="password"
+            autocomplete
+          />
         </div>
         <button type="button" data-next onclick="plusStep(1)">Next</button>
       </div>
@@ -28,17 +34,17 @@
         <h3 id="subtitle">STEP 2</h3>
         <div class="form-group">
           <label for="address">Address</label>
-          <input type="text" name="address" id="address" />
+          <input required type="text" name="address" id="address" />
         </div>
         <div class="form-group">
           <label for="city">City</label>
-          <input type="text" name="city" id="city" />
+          <input required type="text" name="city" id="city" />
         </div>
         <div class="form-group">
           <label for="zipcode">Zip Code</label>
-          <input type="text" name="zipcode" id="zipcode" />
+          <input required type="text" name="zipcode" id="zipcode" />
         </div>
-        <button type="button" data-previous onclick="plusStep(-1)">
+        <button type="button" data-previous onclick="plusStep(-1, true)">
           Previous
         </button>
         <button type="button" data-next onclick="plusStep(1)">Next</button>
@@ -48,17 +54,17 @@
         <h3 id="subtitle">STEP 3</h3>
         <div class="form-group">
           <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" />
+          <input required type="text" name="lastName" id="lastName" />
         </div>
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" />
+          <input required type="text" name="firstName" id="firstName" />
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" name="phone" id="phone" />
+          <input required type="tel" name="phone" id="phone" />
         </div>
-        <button type="button" data-previous onclick="plusStep(-1)">
+        <button type="button" data-previous onclick="plusStep(-1, true)">
           Previous
         </button>
         <button type="submit">Submit</button>
