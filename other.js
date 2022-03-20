@@ -22,5 +22,5 @@ function showStep() {
   for (let i = 0; i < steps.length; i++) {
     steps[i].classList.remove("active")
   }
-  steps[stepIndex - 1].classList.toggle("active")
+  steps[stepIndex - 1].classList.add("active")
 }
